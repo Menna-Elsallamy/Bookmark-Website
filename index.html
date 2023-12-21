@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body class="bg-light">
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <h1 class="py-2 position-relative">Bookmarker</h1>
+    <p class="text-center">
+        ----------------------------------------------------------------------------------------------------------------------
+    </p>
+    <div class="title d-flex justify-content-center fs-5 title">
+        
+        <span><i class="fa-solid fa-bookmark me-1"></i></span>
+        <p> Bookmark your favorite sites </p><span><i class="fa-solid fa-bookmark ms-1"></i></span>
+    </div>
+
+    <div class="container">
+        <label for="Site Name"><span><i class="fa-solid fa-book-bookmark me-1 mb-2"></i></span>Site Name</label>
+        <input placeholder="Bookmark Name" type="text" class="form-control mb-3" id="Site Name">
+        <label for="Site URL"><span><i class="fa-solid fa-link me-1 mb-2"></i></span>Site URL</label>
+        <input placeholder="Bookmark URL" type="text" class="form-control mb-3" id="Site URL">
+        <div class="d-flex justify-content-center"><button onclick="addSites()" class="btn btn-warning">Submit</button></div>
+        <p class="text-center">
+            ----------------------------------------------------------------------------------------------------------------------
+        </p>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tablee">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/script.js"></script>
+</div>
+</body>
+
+</html>
