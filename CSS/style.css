@@ -22,3 +22,47 @@ h1:hover::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.body{
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+#lightboxcontainer{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#lightbox{
+    background-image: url(../work-3.jpg);
+    background-color: white;
+    width: 400px;
+    height: 250px ;
+    background-size: cover;
+}
+.content{
+    top: 10px;
+}
+.circle{
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    top: 10px;
+    
+    margin-bottom: 2px;
+}
+.circlee1{
+    background-color: green;
+    left: 20px;
+
+}
+.circlee2{
+    background-color: yellow;
+    left: 40px;
+}
+.circlee3{
+    background-color: red;
+    left: 60px;
+}

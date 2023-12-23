@@ -1,23 +1,42 @@
 var siteNameInput=document.getElementById('Site Name');
 var siteUrlInput=document.getElementById('Site URL');
+var addbtn=document.getElementById('addbtn');
+var tablebody=document.getElementById('tablee')
 var sitescontainer=[];
 if(localStorage.getItem("sites")!=null){
     sitescontainer=JSON.parse(localStorage.getItem("sites"))
     displaysites();
 }
 function addSites(){
-    var sites={
-        name:siteNameInput.value,
-        url:siteUrlInput.value,
+    if (isValidURL()==true&&isValidName()==true){
+        var sites={
+            name:siteNameInput.value,
+            url:siteUrlInput.value,
+        
+        }
+        sitescontainer.push(sites);
+        localStorage.setItem("sites",JSON.stringify(sitescontainer))
     
+        displaysites();
+        clearform();
+        // console.log(sitescontainer)
     }
-    sitescontainer.push(sites);
-    localStorage.setItem("sites",JSON.stringify(sitescontainer))
-
-    displaysites();
-    clearform();
-    // console.log(sitescontainer)
-}
+    else{
+        // var myimages=document.querySelectorAll(".itemm img");
+        var lightboxcontainer=document.querySelector("#lightboxcontainer");
+        lightboxcontainer.classList.replace("d-none","d-flex")
+    }
+//         for(var i=0;i<myimages.length;i++){
+//             myimages[i].addEventListener("click",function(){
+//                 console.log("hi");
+//                 lightboxcontainer.classList.replace("d-none","d-flex")
+// })
+// }
+    }
+    //     alert('INVALIDURL');
+    // }
+    // }
+   
 function displaysites(){
     var cartoona=``;
     for(i=0;i<sitescontainer.length;i++){
@@ -45,3 +64,27 @@ function Visit(siteindex){
     var url = sitescontainer[siteindex].url;
     window.open(url, "_blank");
 }
+function isValidName() {
+    var nameregex = /^.{3,}$/;
+    if(nameregex.test(siteNameInput.value)==true){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function isValidURL() {
+    var regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
+    if(regex.test(siteUrlInput.value)==true){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+var close=document.querySelector("#closebtn");
+close.addEventListener("click",function(closee)
+{
+    lightboxcontainer.classList.replace("d-flex","d-none")
+
+})
