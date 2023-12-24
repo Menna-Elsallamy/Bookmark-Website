@@ -66,3 +66,7 @@ h1:hover::before {
     background-color: red;
     left: 60px;
 }
+.tick{
+    top: 10px;
+    right: 8px;
+}

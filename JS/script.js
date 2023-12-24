@@ -88,3 +88,16 @@ close.addEventListener("click",function(closee)
     lightboxcontainer.classList.replace("d-flex","d-none")
 
 })
+// var inputElement = document.querySelector("#right");
+//     var checkIcon = document.querySelector('.fa-check');
+//     // var xIcon = document.querySelector('.fa-x');
+//         inputElement.addEventListener("keydown",function(){
+//             checkIcon.classList.replace("d-none","d-block")
+//         })
+//     if (isValidName()) {
+//     inputElement.addEventListener("keydown", function() {
+//         checkIcon.classList.replace("d-none", "d-block");
+//     });
+// }
+    
+    
